@@ -60,7 +60,7 @@
     {{/if_eq}}
     {{/lint}}
     {{#if_eq templateLang "pug"}}
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
     {{/if_eq}}
     {{#if_eq styleLang "sass"}}
     "node-sass": "^4.8.3",

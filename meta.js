@@ -1,23 +1,24 @@
-const path = require('path')
-const fs = require('fs')
+const path = require('path');
+const fs = require('fs');
 
 const {
   sortDependencies,
   installDependencies,
   runLintFix,
   printMessage,
-} = require('./utils')
-const pkg = require('./package.json')
+} = require('./utils');
 
-const templateVersion = pkg.version
+const pkg = require('./package.json');
 
-const { addTestAnswers } = require('./scenarios')
+const templateVersion = pkg.version;
+
+// const { addTestAnswers } = require('./scenarios');
 
 module.exports = {
-  metalsmith: {
-    // When running tests for the template, this adds answers for the selected scenario
-    before: addTestAnswers
-  },
+  // metalsmith: {
+  //   // When running tests for the template, this adds answers for the selected scenario
+  //   before: addTestAnswers
+  // },
   helpers: {
     if_or(v1, v2, options) {
 
@@ -31,7 +32,7 @@ module.exports = {
       return templateVersion
     },
   },
-  
+
   prompts: {
     name: {
       when: 'isNotTest',
@@ -85,11 +86,6 @@ module.exports = {
       message: 'Pick an ESLint preset',
       choices: [
         {
-          name: 'Standard (https://github.com/standard/standard)',
-          value: 'standard',
-          short: 'Standard',
-        },
-        {
           name: 'Airbnb (https://github.com/airbnb/javascript)',
           value: 'airbnb',
           short: 'Airbnb',
@@ -98,6 +94,40 @@ module.exports = {
           name: 'none (configure it yourself)',
           value: 'none',
           short: 'none',
+        },
+      ],
+    },
+    templateLang: {
+      when: 'isNotTest',
+      type: 'list',
+      message: 'Pick an template language',
+      choices: [
+        {
+          name: 'default HTML',
+          value: 'html',
+          short: 'html',
+        },
+        {
+          name: 'PUG (https://pugjs.org/api/getting-started.html)',
+          value: 'pug',
+          short: 'pug',
+        },
+      ],
+    },
+    styleLang: {
+      when: 'isNotTest',
+      type: 'list',
+      message: 'Pick an style language',
+      choices: [
+        {
+          name: 'only css',
+          value: 'css',
+          short: 'css',
+        },
+        {
+          name: 'sass',
+          value: 'sass',
+          short: 'sass',
         },
       ],
     },
@@ -132,6 +162,28 @@ module.exports = {
       when: 'isNotTest',
       type: 'confirm',
       message: 'Setup e2e tests with Nightwatch?',
+    },
+    documentation : {
+      when: 'isNotTest',
+      type: 'list',
+      message : 'Pick a documentation tool',
+      choices: [
+        {
+          name: 'JSDOC',
+          value: 'jsdoc',
+          short: 'jsdoc',
+        },
+        {
+          name: 'Docma',
+          value: 'docma',
+          short: 'docma',
+        },
+        {
+          name: 'No, i do not need a documentation module',
+          value: false,
+          short: 'no',
+        },
+      ],
     },
     autoInstall: {
       when: 'isNotTest',

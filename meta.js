@@ -128,7 +128,7 @@ module.exports = {
       message: 'Set up unit tests',
     },
     runner: {
-      when: 'isNotTest && unit',
+      when: 'unit',
       type: 'list',
       message: 'Pick a test runner',
       choices: [

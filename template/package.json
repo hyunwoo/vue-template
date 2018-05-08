@@ -26,7 +26,7 @@
     "generate-docs": "node_modules/.bin/jsdoc -c jsdoc.json",
     {{/if_eq}}
     {{#if_eq documentation "docma"}}
-    "generate-docs": "./node_modules/docma",
+    "generate-docs": "./node_modules/docma/bin/docma.js",
     {{/if_eq}}
     "build": "node build/build.js",
     "publish" : "env NODE_ENV=production && node build/publish.js"

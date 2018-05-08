@@ -27,6 +27,7 @@
     {{/if_eq}}
     {{#if_eq documentation "docma"}}
     "generate-docs": "./node_modules/docma/bin/docma.js",
+    "serve-docs": "./node_modules/docma/bin/docma.js serve",
     {{/if_eq}}
     "build": "node build/build.js",
     "publish" : "env NODE_ENV=production && node build/publish.js"

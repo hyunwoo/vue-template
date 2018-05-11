@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
     <h1>\{{ msg }}</h1>
+    <h4>{{count}}</h4>
+    <div v-on:click="increment">[ + ]</div>
     <h2>Essential Links</h2>
     <ul>
       <li>
@@ -86,12 +88,33 @@
 <script>
 export default {
   name: 'HelloWorld',
-  data () {
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
-}
+      msg: 'Welcome to Your Vue.js App',
+      posX: 0,
+      posY: 0,
+    };
+  },
+  computed: {
+    count() {
+      return this.$store.state.count;
+    },
+    getPosition() {
+      return {
+        left: `${this.posX}px`,
+        top: `${this.posY}px`,
+      };
+    },
+  },
+  methods: {
+    increment() {
+      this.$store.commit('increment', { inc: 1 });
+    },
+    async mousemoved() {
+      console.log(this);
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

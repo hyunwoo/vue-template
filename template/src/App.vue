@@ -12,14 +12,17 @@
 <script>
 {{#unless router}}
 import HelloWorld from './components/HelloWorld'
-
 {{/unless}}
+import { store } from './vuex/store';
+
 export default {
   name: 'App'{{#router}}{{else}},
   components: {
     HelloWorld
-  }{{/router}}
-}
+  },{{/router}}
+  store,
+  methods: {},
+};
 </script>
 
 <style>

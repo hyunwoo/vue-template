@@ -12,8 +12,8 @@ const store = new Vuex.Store({
    * call by : store.commit('method', arg)
    */
   mutations: {
-    increment(state) {
-      state.count += 1;
+    increment(state, data) {
+      state.count += data.inc;
     },
   },
 
@@ -22,8 +22,8 @@ const store = new Vuex.Store({
    * call by : sotre.dispatch('method', arg)
    */
   actions: {
-    increment(context) {
-      context.commit('increment');
+    increment(context, data) {
+      context.commit('increment', data);
     },
   },
   getters: {

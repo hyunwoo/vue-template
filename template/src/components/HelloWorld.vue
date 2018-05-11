@@ -1,8 +1,9 @@
 <template>
   <div class="hello">
-    <h1>\{{ msg }}</h1>
+    <h1>{{ msg }}</h1>
     <h4>{{ count }}</h4>
     <div v-on:click="increment">[ + ]</div>
+    <div v-on:click="decrement">[ + ]</div>
     <h2>Essential Links</h2>
     <ul>
       <li>
@@ -82,6 +83,9 @@ export default {
   methods: {
     increment() {
       this.$store.commit('increment', { inc: 1 });
+    },
+    decrement() {
+      this.$store.commit('increment', { inc: -1 });
     },
     async mousemoved() {
       console.log(this);

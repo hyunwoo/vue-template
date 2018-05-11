@@ -1,15 +1,20 @@
-# vue-webpack-boilerplate
+# hyunwoo/vue-template
 
-> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
+> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction, Vuex.
 
-> This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
+> Fork from : [vuejs-template/webpack](https://github.com/vuejs-templates/webpack)
 
-## Documentation
+## Guide
 
-- [For this template](http://vuejs-templates.github.io/webpack): common questions specific to this template are answered and each part is described in greater detail
 - [For Vue 2.0](http://vuejs.org/guide/): general information about how to work with Vue, not specific to this template
 
 ## Usage
+
+Default Usage
+``` bash
+$ npm install -g vue-cli
+$ vue init hyunwoo/vue-template [my-project]
+```
 
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It is recommended to use npm 3+ for a more efficient dependency tree.**
 
@@ -21,19 +26,14 @@ $ npm install
 $ npm run dev
 ```
 
-This will scaffold the project using the `master` branch. If you wish to use the latest version of the webpack template, do the following instead:
 
-``` bash
-$ vue init webpack#develop my-project
-```
+* Please refer to [./config/index.js](https://github.com/hyunwoo/vue-template/blob/develop/template/config/index.js) for port and cors configuration
 
-:warning: **The develop branch is not considered stable and can contain bugs or not build at all, so use at your own risk.**
 
 The development server will run on port 8080 by default. If that port is already in use on your machine, the next free port will be used.
 
 ## What's Included
-
-- `npm run dev`: first-in-class development experience.
+- `npm start` , `npm run dev` : first-in-class development experience.
   - Webpack + `vue-loader` for single file Vue components.
   - State preserving hot-reload
   - State preserving compilation error overlay
@@ -56,6 +56,30 @@ The development server will run on port 8080 by default. If that port is already
   - Works with one command out of the box:
     - Selenium and chromedriver dependencies automatically handled.
     - Automatically spawns the Selenium server.
+
+- `npm run publish`: Start the service using Express
+    - express launcher file :  ./build/publish.js
+
+
+
+## Documentation
+> DOCMA
+> - `npm run generate-docs`
+> - `npm run serve-docs` ( serve port : 9000 )
+
+> JSDOC with minima
+> - `npm run generate-docs`
+
+
+* documentation setting files
+
+    DOCMA : [./docma.json](https://github.com/hyunwoo/vue-template/blob/develop/template/docma.json)
+
+    JSDOC : [./jsdoc.json](https://github.com/hyunwoo/vue-template/blob/develop/template/jsdoc.json)
+
+
+
+
 
 ### Fork It And Make Your Own
 

@@ -11,6 +11,5 @@ app.use(cors(config.publish.cors));
 
 const cacheDuration = 1000 * 60 * 60;
 app.use(express.static('./dist' , {maxAge: cacheDuration} ));
-app.use(express.static('./dataset' , {maxAge: cacheDuration} ));
-console.log('server start , port : ' + port);
+console.log('server start with Express , port : ' + port);
 app.listen(port);

@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>\{{ msg }}</h1>
-    <h4>{{count}}</h4>
+    <h4>{{ count }}</h4>
     <div v-on:click="increment">[ + ]</div>
     <h2>Essential Links</h2>
     <ul>

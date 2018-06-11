@@ -1,9 +1,11 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h4>{{ count }}</h4>
-    <div v-on:click="increment">[ + ]</div>
-    <div v-on:click="decrement">[ + ]</div>
+    <h1></h1>
+    <h4>vuex store : {{$store.getters.getCount}}</h4>
+    <div>
+      <span v-on:click="increment" style="cursor: pointer">[ INCREMENT ]</span>
+      <span v-on:click="decrement" style="cursor: pointer">[ DECREMENT ]</span>
+    </div>
     <h2>Essential Links</h2>
     <ul>
       <li>

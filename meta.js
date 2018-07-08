@@ -184,6 +184,11 @@ module.exports = {
       message: 'Branch name',
       default: 'gh-page',
     },
+    githubProjectName: {
+      when: 'githubPage',
+      type: 'string',
+      message: 'What is the GitHub Project Name? (ex. ..)',
+    },
     autoInstall: {
       type: 'list',
       message:

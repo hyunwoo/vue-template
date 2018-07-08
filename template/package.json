@@ -31,6 +31,9 @@
     {{/if_eq}}
     "build": "node build/build.js",
     "publish" : "env NODE_ENV=production && node build/publish.js"
+    {{#githubPage}}
+    "deploy": "npm run build; push-dir --dir=dist --branch={{githubPageBranch}} --cleanup",
+    {{/githubPage}}
   },
   "dependencies": {
     "vue": "^2.5.16",
@@ -117,6 +120,9 @@
     "nightwatch": "^0.9.12",
     "selenium-server": "^3.0.1",
     {{/e2e}}
+    {{#githubPage}}
+    "push-dir": "^0.4.1",
+    {{/githubPage}}
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",

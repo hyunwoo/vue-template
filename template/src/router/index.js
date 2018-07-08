@@ -4,10 +4,6 @@ import Index from '../page/Index';
 
 Vue.use(Router);
 
-
-
-
-
 export default new Router({
   mode: 'history',
   routes: [

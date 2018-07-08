@@ -182,7 +182,7 @@ module.exports = {
       when: 'githubPage',
       type: 'string',
       message: 'Branch name',
-      default: 'gh-page',
+      default: 'gh-pages',
     },
     githubProjectName: {
       when: 'githubPage',

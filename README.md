@@ -1,8 +1,9 @@
 # hyunwoo/vue-template
 
-> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction, Vuex.
+A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction, Vuex.
 
-> Fork from : [vuejs-template/webpack](https://github.com/vuejs-templates/webpack)
+Fork from : [vuejs-template/webpack](https://github.com/vuejs-templates/webpack)
+
 
 ## Guide
 
@@ -28,6 +29,14 @@ $ npm run dev
 
 
 * Please refer to [./config/index.js](https://github.com/hyunwoo/vue-template/blob/develop/template/config/index.js) for port and cors configuration
+
+## Upgrade Items
+
+- Serve With Express
+- Serve With Github Pages
+- Pug Setup
+- Sass Setup
+- Documentation
 
 
 The development server will run on port 8080 by default. If that port is already in use on your machine, the next free port will be used.
@@ -60,6 +69,11 @@ The development server will run on port 8080 by default. If that port is already
 - `npm run publish`: Start the service using Express
     - express launcher file :  ./build/publish.js
 
+- `npm run github-deploy`: Start the service using Github Page
+
+- `npm run generate-docs`: create documentation JSDOC & DOCMA
+    if use docma,
+     - `npm run serve-docs`: serve doc from page.
 
 
 ## Documentation
@@ -71,12 +85,20 @@ The development server will run on port 8080 by default. If that port is already
 > - `npm run generate-docs`
 
 
+
+
+
+
 * documentation setting files
 
     DOCMA : [./docma.json](https://github.com/hyunwoo/vue-template/blob/develop/template/docma.json)
 
     JSDOC : [./jsdoc.json](https://github.com/hyunwoo/vue-template/blob/develop/template/jsdoc.json)
 
+
+## Future work
+- JSDOC to Docs/md.
+- JSDOC serve to github pages
 
 
 

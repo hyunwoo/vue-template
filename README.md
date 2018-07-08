@@ -21,11 +21,13 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init webpack my-project
+$ vue init hyunwoo/vue-tempalte my-project
 $ cd my-project
 $ npm install
 $ npm run dev
 ```
+
+The development server will run on port 8080 by default. If that port is already in use on your machine, the next free port will be used.
 
 
 * Please refer to [./config/index.js](https://github.com/hyunwoo/vue-template/blob/develop/template/config/index.js) for port and cors configuration
@@ -39,7 +41,7 @@ $ npm run dev
 - Documentation
 
 
-The development server will run on port 8080 by default. If that port is already in use on your machine, the next free port will be used.
+
 
 ## What's Included
 - `npm start` , `npm run dev` : first-in-class development experience.

@@ -187,7 +187,9 @@ module.exports = {
     githubProjectName: {
       when: 'githubPage',
       type: 'string',
-      message: 'What is the GitHub Project Name? (ex. ..)',
+      message: 'What is the GitHub Project Name? (* Important: If this project is a user-wide github page, leave it blank. If not, please enter the name of the project.\n' +
+      '1) {USERNAME}.github.io => BLANK,\n' +
+      '2) {USERNAME}.github.io/{PROJECTNAME} => PROJECTNAME )',
     },
     autoInstall: {
       type: 'list',

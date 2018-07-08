@@ -51,11 +51,11 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    {{#deploy}}
-    assetsPublicPath: '/{{ githubProjectName }}/',
+    {{#githubPage}}
+    assetsPublicPath: '/{{ githubProjectName }}',
     {{else}}
     assetsPublicPath: '/',
-    {{/deploy}}
+    {{/githubPage}}
 
     /**
      * Source Maps

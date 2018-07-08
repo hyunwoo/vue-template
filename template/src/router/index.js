@@ -8,6 +8,13 @@ export default new Router({
   mode: 'history',
   routes: [
     {
+      {{#githubPage}}
+      {{#if_eq githubProjectName ""}}}
+      path: '/',
+      {{else}}
+      path: '/{{githubPage}}/',
+      {{/if_eq}}
+      {{else}}
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld,

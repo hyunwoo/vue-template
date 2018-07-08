@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '../page/HelloWorld';
+import Index from '../page/Index';
 
 Vue.use(Router);
 
@@ -17,8 +17,8 @@ export default new Router({
       {{else}}
       path: '/',
       {{/githubPage}}
-      name: 'HelloWorld',
-      component: HelloWorld,
+      name: 'Index',
+      component: Index,
     },
   ],
 });

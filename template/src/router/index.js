@@ -9,7 +9,7 @@ export default new Router({
   routes: [
     {
       {{#githubPage}}
-      {{#if_eq githubProjectName ""}}}
+      {{#if_eq githubProjectName ""}}
       path: '/',
       {{else}}
       path: '/{{githubPage}}/',

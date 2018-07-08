@@ -4,18 +4,19 @@ import HelloWorld from '../page/HelloWorld';
 
 Vue.use(Router);
 
+
+
+
+
 export default new Router({
   mode: 'history',
   routes: [
     {
       {{#githubPage}}
-      {{#if_eq githubProjectName ""}}
-      path: '/',
-      {{else}}
-      path: '/{{githubPage}}/',
-      {{/if_eq}}
+      path: '/{{githubProjectName}}',
       {{else}}
       path: '/',
+      {{#githubPage}}
       name: 'HelloWorld',
       component: HelloWorld,
     },

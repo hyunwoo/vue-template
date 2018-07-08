@@ -30,9 +30,9 @@
     "serve-docs": "./node_modules/docma/bin/docma.js serve",
     {{/if_eq}}
     "build": "node build/build.js",
-    "publish" : "env NODE_ENV=production && node build/publish.js"
+    "publish" : "env NODE_ENV=production && node build/publish.js",
     {{#githubPage}}
-    "deploy": "npm run build; push-dir --dir=dist --branch={{githubPageBranch}} --cleanup",
+    "deploy": "npm run build; push-dir --dir=dist --branch={{githubPageBranch}} --cleanup"
     {{/githubPage}}
   },
   "dependencies": {

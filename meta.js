@@ -153,9 +153,9 @@ module.exports = {
       type: 'confirm',
       message: 'Setup e2e tests with Nightwatch?',
     },
-    documentation : {
+    documentation: {
       type: 'list',
-      message : 'Pick a documentation tool',
+      message: 'Pick a documentation tool',
       choices: [
         {
           name: 'JSDOC',
@@ -173,6 +173,16 @@ module.exports = {
           short: 'no',
         },
       ],
+    },
+    githubPage: {
+      type: 'confirm',
+      message: 'Do you want to deploy on the github page?'
+    },
+    githubPageBranch: {
+      when: 'githubPage',
+      type: 'string',
+      message: 'Branch name',
+      default: 'gh-page',
     },
     autoInstall: {
       type: 'list',
@@ -211,7 +221,7 @@ module.exports = {
     'test/e2e/**/*': 'e2e',
     'src/router/**/*': 'router',
   },
-  complete: function(data, { chalk }) {
+  complete: function (data, { chalk }) {
     const green = chalk.green;
 
     sortDependencies(data, green);

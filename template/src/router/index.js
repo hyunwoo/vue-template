@@ -16,7 +16,7 @@ export default new Router({
       path: '/{{githubProjectName}}',
       {{else}}
       path: '/',
-      {{#githubPage}}
+      {{/githubPage}}
       name: 'HelloWorld',
       component: HelloWorld,
     },

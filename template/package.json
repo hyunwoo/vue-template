@@ -31,7 +31,7 @@
     {{/if_eq}}
     {{#if_eq documentation "documentationjs"}}
     "generate-docs": "./node_modules/documentation/bin/documentation.js build src/** -f html -o ./dist/documentation --shallow",
-    "serve-docs": "./node_modules/documentation/bin/documentation.js serve src/** -f html -o ./dist/documentation --shallow",
+    "serve-docs": "./node_modules/documentation/bin/documentation.js serve src/** -f html --shallow",
     {{/if_eq}}
     "build": "node build/build.js",
     {{#githubPage}}

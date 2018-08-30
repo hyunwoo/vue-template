@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>Welcome to Hanu Vue Template</h1>
+    <h1>{{msg}}}</h1>
     <h4>vuex store</h4>
     <h3 v-html="$store.getters.getCount"></h3>
     <div>
@@ -63,11 +63,15 @@
 </template>
 
 <script>
+
+import store from '../vuex/store';
+
 export default {
   name: 'HelloWorld',
+  store,
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App',
+      msg: 'Welcome to Hanu Vue Template',
       posX: 0,
       posY: 0,
     };

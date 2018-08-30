@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{msg}}</h1>
+    <h1>Welcome to Hanu Vue Template</h1>
     <h4>vuex store</h4>
     <h3 v-html="$store.getters.getCount"></h3>
     <div>
@@ -64,7 +64,7 @@
 
 <script>
 
-import store from '../vuex/store';
+import { store } from '../vuex/store';
 
 export default {
   name: 'HelloWorld',
@@ -73,7 +73,7 @@ export default {
     return {
       msg: 'Welcome to Hanu Vue Template',
       posX: 0,
-      posY: 0,
+      posY: 0
     };
   },
   computed: {
@@ -83,7 +83,7 @@ export default {
     getPosition() {
       return {
         left: `${this.posX}px`,
-        top: `${this.posY}px`,
+        top: `${this.posY}px`
       };
     },
   },
@@ -96,8 +96,8 @@ export default {
     },
     async mousemoved() {
       console.log(this);
-    },
-  },
+    }
+  }
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{msg}}}</h1>
+    <h1>{{msg}}</h1>
     <h4>vuex store</h4>
     <h3 v-html="$store.getters.getCount"></h3>
     <div>

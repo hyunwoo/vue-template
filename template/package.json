@@ -29,6 +29,10 @@
     "generate-docs": "./node_modules/docma/bin/docma.js",
     "serve-docs": "./node_modules/docma/bin/docma.js serve",
     {{/if_eq}}
+    {{#if_eq documentation "documentationjs"}}
+    "generate-docs": "./node_modules/documentation/bin/documentation.js build src/** -f html -o ./dist/documentation --shallow",
+    "serve-docs": "./node_modules/documentation/bin/documentation.js serve src/** -f html -o ./dist/documentation --shallow",
+    {{/if_eq}}
     "build": "node build/build.js",
     "publish" : "env NODE_ENV=production && node build/publish.js",
     {{#githubPage}}
@@ -112,6 +116,9 @@
     "jsdoc-api": "^4.0.1",
     "jsdoc-vue": "^1.0.0",
     "minami": "^1.2.3",
+    {{/if_eq}}
+    {{#if_eq documentation "documentationjs"}}
+    "documentation": "^8.1.2",
     {{/if_eq}}
     {{#e2e}}
     "babel-register": "^6.22.0",

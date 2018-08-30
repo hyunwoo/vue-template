@@ -163,6 +163,11 @@ module.exports = {
           short: 'jsdoc',
         },
         {
+          name: 'documentationjs',
+          value: 'documentationjs',
+          short: 'documentationjs',
+        },
+        {
           name: 'Docma',
           value: 'docma',
           short: 'docma',

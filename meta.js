@@ -23,13 +23,13 @@ module.exports = {
     if_or(v1, v2, options) {
 
       if (v1 || v2) {
-        return options.fn(this)
+        return options.fn(this);
       }
 
-      return options.inverse(this)
+      return options.inverse(this);
     },
     template_version() {
-      return templateVersion
+      return templateVersion;
     },
   },
 
@@ -133,11 +133,6 @@ module.exports = {
       message: 'Pick a test runner',
       choices: [
         {
-          name: 'Jest',
-          value: 'jest',
-          short: 'jest',
-        },
-        {
           name: 'Karma and Mocha',
           value: 'karma',
           short: 'karma',
@@ -193,9 +188,9 @@ module.exports = {
       when: 'githubPage',
       type: 'string',
       message: 'What is the GitHub Project Name? \n' +
-      '* Important: If this project is a user-wide github page, leave it blank. If not, please enter the name of the project.\n' +
-      '1) {USERNAME}.github.io => BLANK,\n' +
-      '2) {USERNAME}.github.io/{PROJECTNAME} => PROJECTNAME \n : ',
+        '* Important: If this project is a user-wide github page, leave it blank. If not, please enter the name of the project.\n' +
+        '1) {USERNAME}.github.io => BLANK,\n' +
+        '2) {USERNAME}.github.io/{PROJECTNAME} => PROJECTNAME \n : ',
     },
     autoInstall: {
       type: 'list',
@@ -224,13 +219,8 @@ module.exports = {
     '.eslintrc.js': 'lint',
     '.eslintignore': 'lint',
     'config/test.env.js': 'unit || e2e',
-    'build/webpack.test.conf.js': "unit && runner === 'karma'",
+    'build/webpack.test.conf.js': 'unit && runner === \'karma\'',
     'test/unit/**/*': 'unit',
-    'test/unit/index.js': "unit && runner === 'karma'",
-    'test/unit/jest.conf.js': "unit && runner === 'jest'",
-    'test/unit/karma.conf.js': "unit && runner === 'karma'",
-    'test/unit/specs/index.js': "unit && runner === 'karma'",
-    'test/unit/setup.js': "unit && runner === 'jest'",
     'test/e2e/**/*': 'e2e',
     'src/router/**/*': 'router',
   },
@@ -244,16 +234,16 @@ module.exports = {
     if (data.autoInstall) {
       installDependencies(cwd, data.autoInstall, green)
         .then(() => {
-          return runLintFix(cwd, data, green)
+          return runLintFix(cwd, data, green);
         })
         .then(() => {
-          printMessage(data, green)
+          printMessage(data, green);
         })
         .catch(e => {
-          console.log(chalk.red('Error:'), e)
-        })
+          console.log(chalk.red('Error:'), e);
+        });
     } else {
-      printMessage(data, chalk)
+      printMessage(data, chalk);
     }
   },
 };

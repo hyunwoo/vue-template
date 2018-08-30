@@ -58,7 +58,7 @@ The development server will run on port 8080 by default. If that port is already
   - Static assets compiled with version hashes for efficient long-term caching, and an auto-generated production `index.html` with proper URLs to these generated assets.
   - Use `npm run build --report`to build with bundle size analytics.
 
-- `npm run unit`: Unit tests run in [JSDOM](https://github.com/tmpvar/jsdom) with [Jest](https://facebook.github.io/jest/), or in PhantomJS with Karma + Mocha + karma-webpack.
+- `npm run unit`: Unit tests run in PhantomJS with Karma + Mocha + karma-webpack.
   - Supports ES2015+ in test files.
   - Easy mocking.
 
@@ -73,8 +73,8 @@ The development server will run on port 8080 by default. If that port is already
 
 - `npm run github-deploy`: Start the service using Github Page
 
-- `npm run generate-docs`: create documentation JSDOC & DOCMA
-    if use docma,
+- `npm run generate-docs`: create documentation JSDOC , DOCMA or documentationjs
+    if use DOCMA or documentationjs
      - `npm run serve-docs`: serve doc from page.
 
 
@@ -86,6 +86,9 @@ The development server will run on port 8080 by default. If that port is already
 > JSDOC with minima
 > - `npm run generate-docs`
 
+> documentationjs 
+> - `npm run generate-docs`
+> - `npm run serve-docs`
 
 
 
@@ -97,6 +100,7 @@ The development server will run on port 8080 by default. If that port is already
 
     JSDOC : [./jsdoc.json](https://github.com/hyunwoo/vue-template/blob/develop/template/jsdoc.json)
 
+    documentationjs : nothing.
 
 ## Future work
 - JSDOC to Docs/md.

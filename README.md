@@ -93,20 +93,11 @@ The development server will run on port 8080 by default. If that port is already
 
 
 
-
 * documentation setting files
 
     DOCMA : [./docma.json](https://github.com/hyunwoo/vue-template/blob/develop/template/docma.json)
-
     JSDOC : [./jsdoc.json](https://github.com/hyunwoo/vue-template/blob/develop/template/jsdoc.json)
-
     documentationjs : nothing.
-
-## Future work
-- JSDOC to Docs/md.
-- JSDOC serve to github pages
-
-
 
 
 ### Fork It And Make Your Own

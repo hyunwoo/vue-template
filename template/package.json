@@ -7,9 +7,6 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    {{#if_eq runner "jest"}}
-    "unit": "jest --config test/unit/jest.conf.js --coverage",
-    {{/if_eq}}
     {{#if_eq runner "karma"}}
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     {{/if_eq}}
@@ -46,7 +43,14 @@
     {{#router}}
     "vue-router": "^3.0.1",
     {{/router}}
-    "compression": "^1.7.2",
+
+    {{^githubPage}}
+    "express": "^4.16.3",
+    "chalk": "^2.0.1",
+    "compression": "^1.7.3",
+    "connect-history-api-fallback": "^1.5.0",
+    {{/githubPage}}
+
     "cors": "^2.8.4",
     "vuex": "^3.0.1"
   },
@@ -58,35 +62,23 @@
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.0.0",
-    {{#if_eq lintConfig "standard"}}
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.2.0",
-    {{/if_eq}}
     {{#if_eq lintConfig "airbnb"}}
     "eslint-config-airbnb-base": "^11.3.0",
     "eslint-import-resolver-webpack": "^0.8.3",
     "eslint-plugin-import": "^2.7.0",
     {{/if_eq}}
     {{/lint}}
+
     {{#if_eq templateLang "pug"}}
     "pug": "^2.0.3",
     {{/if_eq}}
+
     {{#if_eq styleLang "sass"}}
     "node-sass": "^4.8.3",
     "sass": "^1.1.1",
     "sass-loader": "^6.0.6",
     {{/if_eq}}
-    {{#if_eq runner "jest"}}
-    "babel-jest": "^21.0.2",
-    "babel-plugin-dynamic-import-node": "^1.2.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
-    "jest": "^22.0.4",
-    "jest-serializer-vue": "^0.3.0",
-    "vue-jest": "^1.0.2",
-    {{/if_eq}}
+
     {{#if_eq runner "karma"}}
     "cross-env": "^5.0.1",
     "karma": "^1.4.1",
@@ -106,6 +98,7 @@
     "babel-plugin-istanbul": "^4.1.1",
     "phantomjs-prebuilt": "^2.1.14",
     {{/if_eq}}
+
     {{#if_eq documentation "docma"}}
     "jsdoc": "^3.5.5",
     "jsdoc-api": "^4.0.1",
@@ -132,9 +125,11 @@
     "nightwatch": "^0.9.12",
     "selenium-server": "^3.0.1",
     {{/e2e}}
+
     {{#githubPage}}
     "push-dir": "^0.4.1",
     {{/githubPage}}
+
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",

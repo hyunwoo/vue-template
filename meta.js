@@ -68,7 +68,7 @@ module.exports = {
     },
     router: {
       type: 'confirm',
-      message: 'Install vue-router?',
+      message: 'Install vue-router? (recommend)',
     },
     lint: {
       type: 'confirm',
@@ -201,11 +201,6 @@ module.exports = {
           name: 'Yes, use NPM',
           value: 'npm',
           short: 'npm',
-        },
-        {
-          name: 'Yes, use Yarn',
-          value: 'yarn',
-          short: 'yarn',
         },
         {
           name: 'No, I will handle that myself',

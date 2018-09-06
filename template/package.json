@@ -35,9 +35,11 @@
     {{/if_eq}}
     "build": "node build/build.js",
     {{#githubPage}}
-    "github-deploy": "npm run build; push-dir --dir=dist --branch={{githubPageBranch}} --cleanup",
+    "github-deploy": "npm run build; push-dir --dir=dist --branch={{githubPageBranch}} --cleanup"
     {{/githubPage}}
+    {{^githubPage}}
     "publish" : "env NODE_ENV=production && node build/publish.js"
+    {{/githubPage}}
   },
   "dependencies": {
     "vue": "^2.5.16",

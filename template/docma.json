@@ -32,7 +32,7 @@
     "emoji": true
   },
   "app": {
-    "title": "Document",
+    "title": "{{ name }} Document",
     "meta": null,
     "base": "/",
     "entrance": "content:home",
@@ -60,9 +60,8 @@
     }
   },
   "src": [
-    "./src/components/lib/*.js",
-    "./src/javascripts/libs/*.js",
-    "./src/javascripts/helper/*.js"
+    "./src/*.js",
+    "./src/**/.js"
   ],
   "dest": "./dist/docma",
   "clean": true

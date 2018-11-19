@@ -1,3 +1,6 @@
+##Vue-cli 3 is here, so this template is now considered deprecated.
+##뷰 3버전이 나왔으므로, 해당 템플릿은 더이상 사용되지 않습니다.
+
 # hyunwoo/vue-template
 
 A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction, Vuex.
